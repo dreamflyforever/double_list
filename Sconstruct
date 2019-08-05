@@ -1,0 +1,8 @@
+env = Environment(
+	CC = 'gcc',
+	CFLAGS = ['-g', '-Wall', '-I.']
+)
+
+obj_list = env.Object('list.c')
+
+main = env.Program("main", ['main.c', obj_list]);
